@@ -1,19 +1,31 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import {render} from 'react-dom';
+import LoadingPage from './LoadingPage';
+import MainPage from './MainPage';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-    </View>
-  );
+export default class App extends Component {
+  state = {
+    isLoaded : false
+  }
+
+  render() {
+    const {isLoaded} = this.state;
+    return (
+      <View style = {styles.container}>
+        {isLoaded ? (<MainPage style = {styles.page}/>) : (<LoadingPage style = {styles.page}/>)}
+      </View>
+    );
+  }
 }
 
 const styles = StyleSheet.create({
   container: {
+    flex:1,
+    width:'100%',
+  },
+  page: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    width:'100%',
   },
 });
