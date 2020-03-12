@@ -3,12 +3,13 @@ import { StyleSheet, Text, View } from 'react-native';
 import {render} from 'react-dom';
 import {createAppContainer} from 'react-navigation';
 import {createStackNavigator} from 'react-navigation-stack';
-import LoadingPage from '../view/LoadingPage';
-import MainPage from '../view/MainPage';
+import LoadingPage from './view/LoadingPage';
+import MainPage from './view/MainPage';
+
 
 class App extends Component {
   state = {
-    isLoaded : false
+    isLoaded : true
   }
 
   render() {
@@ -35,7 +36,11 @@ const styles = StyleSheet.create({
 const AppNavigator = createStackNavigator({
   Home: {
     screen: App,
+    navigationOptions: {
+      header: null,
+    }
   },
+
 });
 
 export default createAppContainer(AppNavigator);
