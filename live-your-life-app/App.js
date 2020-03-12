@@ -3,8 +3,8 @@ import { StyleSheet, Text, View } from 'react-native';
 import {render} from 'react-dom';
 import {createAppContainer} from 'react-navigation';
 import {createStackNavigator} from 'react-navigation-stack';
-import LoadingPage from './LoadingPage';
-import MainPage from './MainPage';
+import LoadingPage from '../view/LoadingPage';
+import MainPage from '../view/MainPage';
 
 class App extends Component {
   state = {
