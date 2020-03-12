@@ -18,7 +18,7 @@ export default class LoadingPage extends Component {
                         </View>
                         <View style = {loadingStyles.lower}>
                             <Text style = {loadingStyles.content}>
-                                당신은 원하는 것을 할 자유가 있어요.
+                                당신은 원하는 것을 할 자유가 있어요!
                             </Text>
                             <ActivityIndicator style = {loadingStyles.indicator} color = "#B2CBFF" size = "large"/>
                         </View>
